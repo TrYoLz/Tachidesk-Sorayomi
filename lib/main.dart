@@ -19,8 +19,15 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'src/features/about/presentation/about/controllers/about_controller.dart';
 import 'src/global_providers/global_providers.dart';
 import 'src/sorayomi.dart';
+import 'dart:html' as html;
 
 Future<void> main() async {
+
+  const wipeLocalStorage = String.fromEnvironment('WIPE_LOCALSTORAGE', defaultValue: 'false');
+  if (wipeLocalStorage == 'true') { 
+    html.window.localStorage.clear(); 
+  }
+
   WidgetsFlutterBinding.ensureInitialized();
   final packageInfo = await PackageInfo.fromPlatform();
   final sharedPreferences = await SharedPreferences.getInstance();
