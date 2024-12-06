@@ -16,7 +16,7 @@ enum DBKeys {
   sourceLanguageFilter(["all", "lastUsed", "en", "localsourcelang"]),
   extensionLanguageFilter(["installed", "update", "en", "all"]),
   sourceLastUsed(null),
-  themeMode(ThemeMode.system),
+  themeMode(ThemeMode.dark),
   isTrueBlack(false),
   authType(AuthType.none),
   basicCredentials(null),
@@ -46,11 +46,11 @@ enum DBKeys {
   libraryDisplayMode(DisplayMode.grid),
   sourceDisplayMode(DisplayMode.grid),
   gridMangaCoverWidth(400.0),
-  readerOverlay(true),
+  readerOverlay(false),
   volumeTap(false),
   volumeTapInvert(false),
   pinchToZoom(true),
-  flexScheme(FlexScheme.material),
+  flexScheme(FlexScheme.mandyRed),
   ;
 
   const DBKeys(this.initial);

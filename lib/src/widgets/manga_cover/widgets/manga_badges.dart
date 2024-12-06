@@ -103,7 +103,7 @@ class MangaBadge extends StatelessWidget {
       child: Padding(
         padding: KEdgeInsets.a4.size,
         child: text.isNotBlank
-            ? Text(text!, style: TextStyle(color: textColor))
+            ? Text(text!, style: TextStyle(color: textColor, fontSize: 20))
             : Icon(icon, color: textColor, size: 16),
       ),
     );
