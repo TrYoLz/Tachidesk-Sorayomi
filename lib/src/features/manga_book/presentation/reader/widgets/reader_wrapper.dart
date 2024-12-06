@@ -513,29 +513,30 @@ class ReaderView extends HookWidget {
               dragGesturePosition.value = (details.localPosition),
           onTap: toggleVisibility,
           behavior: HitTestBehavior.translucent,
-          onHorizontalDragEnd: (details) {
-            if (scrollDirection == Axis.vertical && readerSwipeChapterToggle) {
-              if (details.primaryVelocity == null) {
-                return;
-              } else if (details.primaryVelocity! > 8) {
-                prevChapter();
-              } else {
-                nextChapter();
-              }
-            }
-          },
-          onVerticalDragEnd: (details) {
-            if (scrollDirection == Axis.horizontal &&
-                readerSwipeChapterToggle) {
-              if (details.primaryVelocity == null) {
-                return;
-              } else if (details.primaryVelocity! > 8) {
-                prevChapter();
-              } else {
-                nextChapter();
-              }
-            }
-          },
+          // These kill pan events for dragging the pages.
+          // onHorizontalDragEnd: (details) {
+          //   if (scrollDirection == Axis.vertical && readerSwipeChapterToggle) {
+          //     if (details.primaryVelocity == null) {
+          //       return;
+          //     } else if (details.primaryVelocity! > 8) {
+          //       prevChapter();
+          //     } else {
+          //       nextChapter();
+          //     }
+          //   }
+          // },
+          // onVerticalDragEnd: (details) {
+          //   if (scrollDirection == Axis.horizontal &&
+          //       readerSwipeChapterToggle) {
+          //     if (details.primaryVelocity == null) {
+          //       return;
+          //     } else if (details.primaryVelocity! > 8) {
+          //       prevChapter();
+          //     } else {
+          //       nextChapter();
+          //     }
+          //   }
+          // },
           child: Padding(
             padding: EdgeInsets.symmetric(
               vertical: context.height *
