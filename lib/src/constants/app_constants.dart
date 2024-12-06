@@ -6,7 +6,7 @@
 
 import 'package:flutter/material.dart';
 
-const Duration kDuration = Duration(milliseconds: 500);
+const Duration kDuration = Duration(milliseconds: 300);
 const Duration kInstantDuration = Duration(microseconds: 1);
 const Duration kLongDuration = Duration(seconds: 2);
 
