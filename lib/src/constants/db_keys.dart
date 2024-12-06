@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'enum.dart';
 
 enum DBKeys {
-  serverUrl('http://127.0.0.1'),
+  serverUrl('server'),
   serverPort(4567),
   serverPortToggle(true),
   sourceLanguageFilter(["all", "lastUsed", "en", "localsourcelang"]),
@@ -20,15 +20,15 @@ enum DBKeys {
   isTrueBlack(false),
   authType(AuthType.none),
   basicCredentials(null),
-  readerMode(ReaderMode.webtoon),
+  readerMode(ReaderMode.singleHorizontalRTL),
   readerPadding(0.0),
   readerMagnifierSize(1.0),
-  readerNavigationLayout(ReaderNavigationLayout.disabled),
-  invertTap(false),
+  readerNavigationLayout(ReaderNavigationLayout.rightAndLeft),
+  invertTap(true),
   quickSearchToggle(true),
-  swipeToggle(true),
+  swipeToggle(false),
   scrollAnimation(true),
-  showNSFW(true),
+  showNSFW(false),
   downloadedBadge(true),
   unreadBadge(true),
   languageBadge(false),
@@ -45,7 +45,7 @@ enum DBKeys {
   chapterSortDirection(false), // asc=true, dsc=false
   libraryDisplayMode(DisplayMode.grid),
   sourceDisplayMode(DisplayMode.grid),
-  gridMangaCoverWidth(192.0),
+  gridMangaCoverWidth(400.0),
   readerOverlay(true),
   volumeTap(false),
   volumeTapInvert(false),

@@ -23,7 +23,7 @@ class ServerUrl extends _$ServerUrl with SharedPreferenceClientMixin<String> {
   @override
   String? build() => initialize(
         DBKeys.serverUrl,
-        initial: kIsWeb ? Uri.base.origin : DBKeys.serverUrl.initial,
+        initial: DBKeys.serverUrl.initial,
       );
 }
 
