@@ -44,7 +44,16 @@ class Chapter with _$Chapter {
   }
 
   String getDisplayName(BuildContext context) {
-    return name ??
+    // Filter chapter title, only show number.
+    String? processedName;
+    if (name != null) {
+      final regex = RegExp(r'^\D*\d+');
+      final match = regex.firstMatch(name!);
+      if (match != null) {
+        processedName = match.group(0);
+      }
+    }
+    return processedName ??
         context.l10n!.chapterNumber(
           chapterNumber ?? index?.toDouble() ?? 0,
         );

@@ -186,9 +186,9 @@ class ReaderWrapper extends HookConsumerWidget {
                           overflow: TextOverflow.ellipsis,
                         )
                       : null,
-                  subtitle: (chapter.name).isNotBlank
+                  subtitle: (chapter.getDisplayName(context)).isNotBlank
                       ? Text(
-                          "${chapter.name}",
+                          "${chapter.getDisplayName(context)}",
                           overflow: TextOverflow.ellipsis,
                         )
                       : null,
