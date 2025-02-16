@@ -37,7 +37,7 @@ class ShellScreen extends HookConsumerWidget {
     if (context.mounted) {
       versionResult.whenOrNull(
         data: (version) {
-          if (version != null) {
+          if (false && version != null) {
             appUpdateDialog(
               title: title ?? context.l10n!.appTitle,
               newRelease: "v${version.canonicalizedVersion}",
